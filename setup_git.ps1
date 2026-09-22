@@ -6,7 +6,7 @@
 $ErrorActionPreference = "Continue"
 
 $REPO_NAME = "Analise_Mercado_Alpha_Vantage"
-$GITHUB_USER = "marcosferreiraracabral"
+$GITHUB_USER = "marcosferreiracabral"
 $REMOTE_HTTPS = "https://github.com/$GITHUB_USER/$REPO_NAME.git"
 
 Write-Host "Iniciando configuracao do repositorio Git..." -ForegroundColor Cyan
