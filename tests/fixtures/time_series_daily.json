@@ -1,0 +1,61 @@
+{
+  "Meta Data": {
+    "1. Information": "Daily Time Series with Splits and Dividend Events",
+    "2. Symbol": "PETR4.SAO",
+    "3. Last Refreshed": "2026-09-22",
+    "4. Output Size": "Compact",
+    "5. Time Zone": "US/Eastern"
+  },
+  "Time Series (Daily)": {
+    "2026-09-22": {
+      "1. open": "38.5000",
+      "2. high": "39.2000",
+      "3. low": "38.1000",
+      "4. close": "38.9500",
+      "5. adjusted close": "38.9500",
+      "6. volume": "42518300",
+      "7. dividend amount": "0.0000",
+      "8. split coefficient": "1.0"
+    },
+    "2026-09-21": {
+      "1. open": "37.9000",
+      "2. high": "38.6000",
+      "3. low": "37.7500",
+      "4. close": "38.4000",
+      "5. adjusted close": "38.4000",
+      "6. volume": "38910200",
+      "7. dividend amount": "0.0000",
+      "8. split coefficient": "1.0"
+    },
+    "2026-09-20": {
+      "1. open": "37.5000",
+      "2. high": "38.1000",
+      "3. low": "37.2000",
+      "4. close": "37.8500",
+      "5. adjusted close": "37.8500",
+      "6. volume": "45120000",
+      "7. dividend amount": "0.0000",
+      "8. split coefficient": "1.0"
+    },
+    "2026-09-19": {
+      "1. open": "37.2000",
+      "2. high": "37.6000",
+      "3. low": "36.9000",
+      "4. close": "37.4000",
+      "5. adjusted close": "37.4000",
+      "6. volume": "31200000",
+      "7. dividend amount": "0.0000",
+      "8. split coefficient": "1.0"
+    },
+    "2026-09-18": {
+      "1. open": "36.8000",
+      "2. high": "37.3000",
+      "3. low": "36.6000",
+      "4. close": "37.1000",
+      "5. adjusted close": "37.1000",
+      "6. volume": "29800000",
+      "7. dividend amount": "0.0000",
+      "8. split coefficient": "1.0"
+    }
+  }
+}

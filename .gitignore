@@ -1,0 +1,47 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Environments
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment Variables & Secrets
+.env
+*.json
+!tests/fixtures/*.json
+!package.json
+!tsconfig.json
+service_account*.json
+credentials*.json
+
+# Data & Cache files
+data/
+!data/.gitkeep
+data/*
+!data/.gitkeep
+*.sqlite
+*.sqlite3
+*.db
+*.parquet
+*.csv
+
+# Streamlit
+.streamlit/
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.ruff_cache/
+.mypy_cache/
+
+# OS Specific
+.DS_Store
+Thumbs.db

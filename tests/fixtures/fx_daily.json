@@ -1,0 +1,30 @@
+{
+  "Meta Data": {
+    "1. Information": "Forex Daily Prices (open, high, low, close)",
+    "2. From Symbol": "USD",
+    "3. To Symbol": "BRL",
+    "4. Output Size": "Compact",
+    "5. Last Refreshed": "2026-09-22 21:55:00",
+    "6. Time Zone": "UTC"
+  },
+  "Time Series FX (Daily)": {
+    "2026-09-22": {
+      "1. open": "5.4510",
+      "2. high": "5.4830",
+      "3. low": "5.4320",
+      "4. close": "5.4620"
+    },
+    "2026-09-21": {
+      "1. open": "5.4210",
+      "2. high": "5.4600",
+      "3. low": "5.4150",
+      "4. close": "5.4490"
+    },
+    "2026-09-20": {
+      "1. open": "5.4050",
+      "2. high": "5.4350",
+      "3. low": "5.3980",
+      "4. close": "5.4190"
+    }
+  }
+}

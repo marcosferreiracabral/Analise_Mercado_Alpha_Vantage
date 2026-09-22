@@ -1,0 +1,22 @@
+{
+  "Meta Data": {
+    "1: Symbol": "PETR4.SAO",
+    "2: Indicator": "Relative Strength Index (RSI)",
+    "3: Last Refreshed": "2026-09-22",
+    "4: Interval": "daily",
+    "5: Time Period": 14,
+    "6: Series Type": "close",
+    "7: Time Zone": "US/Eastern"
+  },
+  "Technical Analysis: RSI": {
+    "2026-09-22": {
+      "RSI": "63.4215"
+    },
+    "2026-09-21": {
+      "RSI": "59.8821"
+    },
+    "2026-09-20": {
+      "RSI": "54.1205"
+    }
+  }
+}
