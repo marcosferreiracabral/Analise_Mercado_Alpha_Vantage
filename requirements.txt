@@ -4,7 +4,7 @@ urllib3>=2.2.1
 pydantic>=2.7.0
 pydantic-settings>=2.2.1
 python-dotenv>=1.0.1
-pytz>=2024.1
+pytz>=2026.3.post1
 
 # Data Processing & Math
 pandas>=2.2.0
