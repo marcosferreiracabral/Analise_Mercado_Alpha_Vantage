@@ -1,6 +1,6 @@
 # Core Pipeline & API
 requests>=2.31.0
-urllib3>=2.2.1
+urllib3>=2.8.0
 pydantic>=2.7.0
 pydantic-settings>=2.2.1
 python-dotenv>=1.0.1
