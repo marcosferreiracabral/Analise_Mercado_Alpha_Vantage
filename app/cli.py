@@ -229,7 +229,7 @@ def run_sync() -> None:
                     close=float(row["close"]),
                     adjusted_close=float(row["adjusted_close"]),
                     volume=int(row["volume"]),
-                    ingested_at=pd.to_datetime(row["ingested_at"]).to_pydatetime() if pd.notnull(row.get("ingested_at")) else None,
+                    ingested_at=pd.to_datetime(row["ingested_at"]).to_pydatetime() if pd.notnull(row.get("ingested_at")) else datetime.now(),
                 )
                 for _, row in group.iterrows()
             ]
@@ -252,7 +252,7 @@ def run_sync() -> None:
                 previous_close=float(row["previous_close"]),
                 change=float(row["change"]),
                 change_percent=float(row["change_percent"]),
-                ingested_at=pd.to_datetime(row["ingested_at"]).to_pydatetime() if pd.notnull(row.get("ingested_at")) else None,
+                ingested_at=pd.to_datetime(row["ingested_at"]).to_pydatetime() if pd.notnull(row.get("ingested_at")) else datetime.now(),
             )
             storage.bq_loader.save_gold_latest_quote(quote)
         console.print(f"Synced gold quotes: count={len(local_quotes_df)}")
