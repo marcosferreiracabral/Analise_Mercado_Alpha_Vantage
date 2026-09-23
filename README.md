@@ -152,7 +152,7 @@ STORAGE_MODE=auto
 LOCAL_DATA_DIR=./data
 
 # Google Cloud Platform (leave blank for local storage mode)
-GCP_PROJECT_ID=api-project-805489364666
+GCP_PROJECT_ID=api-project-
 BIGQUERY_DATASET=market_data
 BIGQUERY_LOCATION=US
 GOOGLE_APPLICATION_CREDENTIALS=./service_account.json
@@ -226,13 +226,13 @@ The dashboard provides four analytical views:
 
 ## 6. Google Cloud Configuration (BigQuery)
 
-1. **GCP Project Setup**: Create a GCP project (e.g., `api-project-805489364666`) and enable the BigQuery API.
+1. **GCP Project Setup**: Create a GCP project (e.g., `api-project-`) and enable the BigQuery API.
 2. **Service Account**: Create a Service Account with `roles/bigquery.admin` or `roles/bigquery.dataEditor` + `roles/bigquery.jobUser`.
 3. **Service Account Key**: Download the JSON key file and place it at `./service_account.json`.
 4. **Configure `.env`**:
    ```ini
    STORAGE_MODE=bigquery
-   GCP_PROJECT_ID=api-project-805489364666
+   GCP_PROJECT_ID=api-project-
    BIGQUERY_DATASET=market_data
    BIGQUERY_LOCATION=US
    GOOGLE_APPLICATION_CREDENTIALS=./service_account.json
@@ -256,7 +256,7 @@ docker run -p 8501:8501 --env-file .env market-pipeline:latest
 # Deploy to Google Cloud Run
 gcloud run deploy market-dashboard \
     --source . \
-    --project api-project-805489364666 \
+    --project api-project- \
     --region us-central1 \
     --allow-unauthenticated \
     --set-env-vars STORAGE_MODE=bigquery,GCP_PROJECT_ID=api-project-805489364666,BIGQUERY_DATASET=market_data,BIGQUERY_LOCATION=US
