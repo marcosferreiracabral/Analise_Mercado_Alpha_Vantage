@@ -259,7 +259,7 @@ gcloud run deploy market-dashboard \
     --project api-project- \
     --region us-central1 \
     --allow-unauthenticated \
-    --set-env-vars STORAGE_MODE=bigquery,GCP_PROJECT_ID=api-project-805489364666,BIGQUERY_DATASET=market_data,BIGQUERY_LOCATION=US
+    --set-env-vars STORAGE_MODE=bigquery,GCP_PROJECT_ID=api-project-,BIGQUERY_DATASET=market_data,BIGQUERY_LOCATION=US
 ```
 
 ---
