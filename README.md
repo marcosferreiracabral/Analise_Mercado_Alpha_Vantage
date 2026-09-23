@@ -1,5 +1,11 @@
 # Alpha Vantage Financial Market Pipeline and Analytics Dashboard
 
+[![CI Pipeline](https://github.com/marcosferreiracabral/Analise_Mercado_Alpha_Vantage/actions/workflows/ci.yml/badge.svg)](https://github.com/marcosferreiracabral/Analise_Mercado_Alpha_Vantage/actions/workflows/ci.yml)
+[![Python Version](https://img.shields.io/badge/python-3.12%20%7C%203.13-blue.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Code Style: Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
+[![Type Checked: Mypy](https://img.shields.io/badge/type--checked-mypy-blue)](https://mypy-lang.org/)
+
 End-to-end financial data pipeline built in Python 3.12+, implementing the Medallion Architecture (Bronze, Silver, Gold). The pipeline extracts real-time quotes, daily time series, forex, and cryptocurrency data from the Alpha Vantage API, validates and computes derived quantitative features, persists data into Google Cloud BigQuery with local SQLite/Parquet fallback, and serves an interactive Streamlit analytics dashboard.
 
 ---
