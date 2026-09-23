@@ -9,28 +9,28 @@ End-to-end financial data pipeline built in Python 3.12+, implementing the Medal
 ```mermaid
 flowchart TD
     subgraph Extract["1. Extraction Layer"]
-        AV[Alpha Vantage API] --> Client[AlphaVantageClient\nExponential Retry + RateLimiter]
-        Client --> Endpoints[Global Quote\nTime Series Daily\nFX Daily USD/BRL\nCrypto Daily BTC/USD]
+        AV["Alpha Vantage API"] --> Client["AlphaVantageClient<br/>Exponential Retry + RateLimiter"]
+        Client --> Endpoints["Global Quote<br/>Time Series Daily<br/>FX Daily USD/BRL<br/>Crypto Daily BTC/USD"]
     end
 
     subgraph Transform["2. Transformation Layer (Medallion)"]
-        Endpoints --> Bronze[Bronze: Raw JSON Ingestion\nAudit & Reprocessing]
-        Bronze --> Clean[Cleaner & Validator\nPydantic v2 + Timezone America/Sao_Paulo\nDeduplication by symbol, date]
-        Clean --> Silver[Silver: Cleaned Daily Time Series\nDate Partitioning]
-        Silver --> Features[Feature Engineering\nReturn %, 21d Volatility, Drawdown, RSI 14, MACD, SMAs]
-        Features --> Gold[Gold: Enriched Features & Quotes]
+        Endpoints --> Bronze["Bronze: Raw JSON Ingestion<br/>Audit & Reprocessing"]
+        Bronze --> Clean["Cleaner & Validator<br/>Pydantic v2 + Timezone America/Sao_Paulo<br/>Deduplication by symbol, date"]
+        Clean --> Silver["Silver: Cleaned Daily Time Series<br/>Date Partitioning"]
+        Silver --> Features["Feature Engineering<br/>Return %, 21d Volatility, Drawdown, RSI 14, MACD, SMAs"]
+        Features --> Gold["Gold: Enriched Features & Quotes"]
     end
 
     subgraph Load["3. Storage Layer"]
-        Silver --> Storage{Storage Manager}
+        Silver --> Storage{"Storage Manager"}
         Gold --> Storage
-        Storage -->|GCP Cloud| BQ[(Google Cloud BigQuery\nIdempotent MERGE / LoadJob\nPartitioned & Clustered)]
-        Storage -->|Local Fallback| LocalDB[(Local SQLite DB\n& Partitioned Parquet)]
+        Storage -->|GCP Cloud| BQ[("Google Cloud BigQuery<br/>Idempotent MERGE / LoadJob<br/>Partitioned & Clustered")]
+        Storage -->|Local Fallback| LocalDB[("Local SQLite DB<br/>& Partitioned Parquet")]
     end
 
     subgraph Presentation["4. Presentation and Operations"]
-        Storage --> Streamlit[Streamlit Dashboard\n4 Views + 5-min TTL Cache]
-        Storage --> CLI[CLI Interface\nsetup | collect | backfill | sync | status | dashboard]
+        Storage --> Streamlit["Streamlit Dashboard<br/>4 Views + 5-min TTL Cache"]
+        Storage --> CLI["CLI Interface<br/>setup, collect, backfill, sync, status, dashboard"]
     end
 ```
 
