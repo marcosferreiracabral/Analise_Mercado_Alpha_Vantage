@@ -139,7 +139,7 @@ cp .env.example .env
 Default configuration in `.env`:
 ```ini
 # Alpha Vantage API Key
-ALPHA_VANTAGE_API_KEY=O2YI1934J9Z2QHQR
+ALPHA_VANTAGE_API_KEY=KEY
 
 # Request throttle pause in seconds (5 req/min free tier threshold)
 ALPHA_VANTAGE_RATE_LIMIT_PAUSE=12.0
