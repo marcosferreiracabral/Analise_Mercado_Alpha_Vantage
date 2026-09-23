@@ -18,7 +18,7 @@ db-dtypes>=1.2.0
 
 # Visualization & Dashboard
 streamlit>=1.35.0
-plotly>=5.22.0
+plotly>=7.1.0
 
 # CLI & Formatting
 rich>=13.7.0
